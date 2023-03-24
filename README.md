@@ -4,11 +4,11 @@ Abcodef is an alphabtic programming language. This extension was created to help
 
 ## Features
 
-This extension color the `.abco`
+This extension color the `.abco` files
 
 
 ## For more information
 
-* [Abcodef Github](http://code.visualstudio.com/docs/languages/markdown)
+* [Abcodef Github](https://github.com/PiggyPigCute/abcodef)
 
 **Enjoy!**

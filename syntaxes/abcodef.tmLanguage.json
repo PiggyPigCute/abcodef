@@ -1,0 +1,52 @@
+{
+	"scopeName": "source.abcodef",
+	"patterns": [
+		{"include": "#expression"}
+	],
+	"repository": {
+		"expression": {
+			"patterns": [
+				{"include": "#comment"},
+				{"include": "#comment.keyword"},
+				{"include": "#string.txt"},
+				{"include": "#string.nam"},
+				{"include": "#control"},
+				{"include": "#function"},
+				{"include": "#var"},
+				{"include": "#numeric"}
+			]
+		},
+		"comment": {
+			"match": "com [^\\n\\r\\f\\v]*",
+			"name": "comment.abcodef"
+		},
+		"comment.keyword": {
+			"match": "com\\n",
+			"name": "comment.keyword.abcodef"
+		},
+		"string.txt": {
+			"match": "(?<=txt )[^\\n\\r\\f\\v]*",
+			"name": "string.txt.abcodef"
+		},
+		"string.nam": {
+			"match": "(?<=nam )[^\\s\\n\\r\\f\\v]*",
+			"name": "string.nam.abcodef"
+		},
+		"control": {
+			"match": "(iff|els|whl|for|fun|ret|end)[ \\n]",
+			"name": "keyword.control.abcodef"
+		},
+		"function": {
+			"match": "[a-z]{3}(?=[^a-zA-Z])",
+			"name": "entity.name.function.abcodef"
+		},
+		"var": {
+			"match": "[a-zA-Z][a-zA-Z\\d]*",
+			"name": "variable.abcodef"
+		},
+		"numeric": {
+			"match": "\\d+",
+			"name": "constant.numeric.abcodef"
+		}
+	}
+}
